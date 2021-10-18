@@ -1,0 +1,214 @@
+
+body {
+  font-family: "Karla", sans-serif;
+  background-image: linear-gradient(to right, #180377, #b44188);    min-height: 100vh;
+}
+
+.brand-wrapper {
+  margin-bottom: 19px;
+ 
+}
+.brand-wrapper .logo {
+  height: 100px;
+  width: 200px;
+}
+
+
+.svg-inline--fa.fa-w-18 {
+  width: 2.125em !important;
+}
+
+.svg-inline--fa {
+  height: 1.2em !important;
+}
+.card{
+
+  border:none;
+  height: 500px;
+  width: 500px; 
+  border-radius: 30.5px;
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  box-shadow: 0 10px 30px 0 rgba(192, 185, 151, 0.918);    /*card shadow*/
+  overflow: hidden;
+  background-image: linear-gradient(to right, #cdd8df, #56eff5);
+}
+.login-card {
+  border: 0;
+  border-radius: 30.5px;
+  box-shadow: 0 10px 30px 0 rgba(192, 185, 151, 0.918);    /*card shadow*/
+  overflow: hidden;
+}
+.login-card-img {
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.login-card .card-body {
+  padding: 35px 60px 30px;
+}
+@media (max-width: 422px) {
+  .login-card .card-body {
+    padding: 35px 24px;
+  }
+}
+.login-card-description {
+  font-size: 20px;
+  color: antiquewhite;                            /*  sign text*/
+  font-weight: normal;
+  margin-bottom: 23px;
+}
+.login-card form {
+  max-width: 326px;
+}
+.login-card .form-control {
+  border: 1px solid #bb954300;                     /*box border*/
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  min-height: 45px;
+  font-size: 13px;
+  line-height: 15;
+  font-weight: normal;
+}
+/*
+.login-card .form-control::-webkit-input-placeholder {
+  color: antiquewhite;
+} 
+
+.login-card .form-control::-moz-placeholder {
+  color: antiquewhite;
+} 
+.login-card .form-control:-ms-input-placeholder {
+  color: antiquewhite;
+} 
+
+.login-card .form-control::-ms-input-placeholder {
+  color: antiquewhite;
+}   */
+.login-card .form-control::placeholder {
+  color: rgb(124, 120, 118);                 /*text inbox email,name password */
+} 
+.login-card .login-btn {
+  padding: 13px 20px 12px;
+  background-color: red;                      /*login box*/
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color:antiquewhite;                         /*login box text*/
+  margin-bottom: 24px;
+}
+/*
+.login-card .login-btn:hover {
+  border: 1px solid rgb(8, 6, 6);
+  background-color: transparent;
+  color: #000;
+} */
+/*
+.login-card .forgot-password-link {
+  font-size: 14px;
+  color: #28d107;
+  margin-bottom: 12px;
+}*/
+.login-card-footer-text {
+  font-size: 16px;
+  color: #817f74;                                      /*dont have account*/
+  margin-bottom: 60px;
+}
+
+/*
+@media (max-width: 767px) {
+  .login-card-footer-text {
+    margin-bottom: 24px;
+  }
+}
+/*
+.login-card-footer-nav a {
+  font-size: 14px;
+  color: #0c56a0;
+}   */
+
+/*****************************************************
+
+/*# sourceMappingURL=login.css.map */
+
+/* 
+
+.form-control{      
+    text-align: center;      
+    width: 200px;      
+    height: 40px;      
+    color: black;      
+    border-color: black;      
+    border-radius: 1px;      
+}      
+.btn-btn-primary{      
+    text-align: center;      
+    border-radius: 6px;      
+    background-color: #1976d2;      
+    width: 80px;      
+    height:30px;      
+    border-style: hidden;      
+    color: white;      
+}      
+input.ng-invalid.ng-touched{      
+    border-color: red;      
+}      
+.text{      
+    text-align: center;      
+    font-size: x-large;      
+}      
+.container{      
+    text-align: center;      
+}    */
+
+.btn-log{
+  width: 10%;
+}
+
+.colors{
+  color: red;
+}
+
+button {
+  display: inline-block;
+  background-color: #14012e;
+  border-radius: 10px;
+  
+  color: #eeeeee;
+  text-align: center;
+  font-size: 15px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: #f7c2f9;
+}
+button:hover span {
+  padding-right: 25px;
+}
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

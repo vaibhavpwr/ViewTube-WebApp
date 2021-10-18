@@ -1,0 +1,15 @@
+<div class="col-lg-3 mb-4">
+  <div class="card h-100">
+    <a (click)="handleCick()"><img class="card-img-top" src="{{ thumbnail }}" alt="" /></a>
+    <div class="card-body">
+      <h6 class="">
+        <a style="cursor: pointer; color: primary" (click)="handleCick()">{{ videoTitle.substring(0,30) }}...</a>
+
+        <div style="display: flex; justify-content: space-between;">
+          <p>{{channelTitle}}</p>
+          <app-fav-button [userId]="singleUser" [thumbnail]="thumbnail"[videoId]="videoId" [channelTitle]="channelTitle" [videoTitle]="videoTitle"></app-fav-button>
+        </div>
+      </h6>
+    </div>
+  </div>
+</div>

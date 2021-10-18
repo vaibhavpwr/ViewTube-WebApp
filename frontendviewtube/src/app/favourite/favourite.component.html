@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>Document</title> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+ 
+  <nav class="navbar justify-content-between">
+    <h1  class="Head" (click)="getHome()" style="cursor: pointer;">ViewTube</h1>
+   
+        <a style="color:white" routerLink="/home">Home</a>
+       
+     
+
+    <form class="form-inline">
+    </form>
+    <div> <a style="color:white" (click)="logout()" >Logout</a>
+      &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;
+    </div>
+  </nav>
+<div class="wrapper">
+  <!-- <app-side-bar></app-side-bar> -->
+  <div class="sidebar">
+   <!-- <h2>menu</h2> -->
+   <div>
+    <h5 style="color:purple">My Favourites</h5>
+      </div>
+  </div>
+ 
+  <div class="main_content">
+    <br>
+    <div class="row">
+     
+        <ul *ngFor="let videos of videoData">
+          <app-video-section 
+          [thumbnail]="videos.thumbnail" 
+          [videoTitle]="videos.videoTitle"
+          [channelTitle]="videos.channelTitle" 
+          [videoId]="videos.videoId"> 
+        </app-video-section>
+        </ul>
+  
+    </div>
+  </div>
+  
+
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login </title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./login.component.css">
+</head>
+<body>
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card " >             <!--card color-->
+        <div class="row no-gutters">
+          <div class="col-md-6">
+            <img src="../../assets/images.jpg" alt="login" class="login-card-img">
+          </div>   
+          <div class="col-md-6 ">
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="../../assets/imageonline-co-roundcorner.png" alt="logo" class="logo"> 
+
+               <!--<img src="../../assets/logo.svg" alt="logo" class="logo"> 
+               <fa-icon [icon]="faVideo" style="position:relative; width: 100px;height: 100px;" ></fa-icon>
+                <i class="fas fa-video" style="position:relative; width: 100px;height: 100px;"></i>   -->
+                <!-- <h1 style="display: inline; color: red;">ViewTube</h1> -->
+              </div>
+
+              <p class="login-card-description">Already have viewtube?</p>
+
+                <form #form='ngForm' class="mb-4" autocomplete="off"  (submit)="onLogin(form)" >
+                  <div class="form-group">
+                    <label for="email" class="sr-only">Name</label>
+                    <input type="name" class="form-control"#UserName="ngModel" name="UserId" [(ngModel)]="formModel.UserId" placeholder="UserName"  required>
+                    <label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">Please fill the username </label>                 
+                  </div>               
+                  <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" class="form-control"  #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" placeholder="Enter your Password" required>
+                    <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">Please fill the password </label>
+                    <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">Minimum 4 characters required.</label>
+                  </div>
+                 
+                <div class="form-row">
+                  <div class="form-group col-md-8 offset-md-2">
+                  <button type="submit" class="btn btn-block login-btn mb-4" >Login </button>            
+                  </div>
+                </div>
+                            
+              </form>
+              
+                <p class="login-card-footer-text">New User?!!! <a class="text-reset"  (click)="RegisterNavigate()"><h5 style="color: rgb(25, 3, 46);font-size: 15px;">Register</h5></a></p>
+               
+            </div>
+          </div>  
+        </div>     
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

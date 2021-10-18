@@ -1,0 +1,78 @@
+
+  <nav id="heading" class="navbar  justify-content-between">
+    <h1 class="head">ViewTube</h1>
+    <a style="color:white" href="/home">Home</a>
+    <a style="color:white" routerLink="/favourite">My Favourites</a>
+    <div class="dropdown">
+      <button class="dropbtn">Categories
+       
+      </button>
+      <div class="dropdown-content" aria-labelledby="dropdownMenuButton1" style="cursor: pointer;background-color: rgb(145, 145, 145);">
+        <p><a class="dropdown-item" (click)="category(17)" style="color: rgb(1, 1, 8);">Sports</a></p>
+        <br>
+        <p><a class="dropdown-item" (click)="category(27)" style="color: rgb(1, 1, 8);">Education</a></p>
+        <br>
+        <p><a class="dropdown-item" (click)="category(20)" style="color: rgb(1, 1, 8);">Gaming</a></p>
+        <br>
+        <p><a class="dropdown-item" (click)="category(28)" style="color: rgb(1, 1, 8);">Science & Technology</a></p>
+        <br>
+        <p><a class="dropdown-item" (click)="category(10)" style="color: rgb(1, 1, 8);">Music</a></p>
+        <br>
+        <p><a class="dropdown-item" (click)="category(24)" style="color: rgb(1, 1, 8);">Entertainment</a></p>
+      </div>
+      
+      
+    </div> 
+    <form class="form-inline">
+      <input #channelName class="form-control mr-sm-2" type="search" placeholder="Search a video" aria-label="Search" />
+      <button style="border: none; outline: none; background: transparent; margin-right: 10px"
+        class="btn btn-outline-dark my-2 my-sm-0 sbtn" type="submit" (click)="searchVideos()">
+      
+      </button>
+      <button type="button" style="width: 75px;color:rgb(10, 10, 10)" (click)="onLogout()">Logout</button>
+
+    </form>
+  
+  </nav>
+<body>
+  <br>
+  <div class="wrapper">
+    <div>
+  <h5 style="color:purple">Click &hearts; for Favourite</h5>
+    </div>
+   
+
+    <div class="main_content">
+      <div class="row">
+        <div class="row">
+          <ul *ngFor="let searchVideos of searchedVideos">
+            <app-video-section [thumbnail]="searchVideos.snippet.thumbnails.medium.url"
+              [videoTitle]="searchVideos.snippet.title" [channelTitle]="searchVideos.snippet.channelTitle"
+              [videoId]="searchVideos.id.videoId"></app-video-section>
+          </ul>
+        </div>
+        <div class="row">
+          <ul *ngFor="let videosByCategory of videosByCategory">
+            <app-video-section [thumbnail]="videosByCategory.snippet.thumbnails.medium.url"
+              [videoTitle]="videosByCategory.snippet.title" [channelTitle]="videosByCategory.snippet.channelTitle"
+              [videoId]="videosByCategory.id"></app-video-section>
+          </ul>
+        </div>
+         <div class="row">
+          <ul *ngFor="let searchVideos of searchedVideos">
+            <app-video-section [thumbnail]="searchVideos.snippet.thumbnails.medium.url"
+              [videoTitle]="searchVideos.snippet.title" [channelTitle]="searchVideos.snippet.channelTitle"
+              [videoId]="searchVideos.id.videoId"></app-video-section>
+          </ul>
+        </div>
+        <ul *ngFor="let videos of popularVideos">
+          <app-video-section [thumbnail]="videos.snippet.thumbnails.medium.url" [videoTitle]="videos.snippet.title"
+            [channelTitle]="videos.snippet.channelTitle" [videoId]="videos.id"></app-video-section>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
